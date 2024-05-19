@@ -39,6 +39,10 @@ export const login = createAsyncThunk(
   }
 );
 
+export const refreshUser = createAsyncThunk("auth/refresh", async (_, thunkAPI)=>{
+  console.log("refresh");
+})
+
 // stani@gmail.com
 // stanislav
 
