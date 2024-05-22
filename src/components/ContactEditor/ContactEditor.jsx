@@ -40,7 +40,9 @@ export default function ContactForm() {
         />
       </label>
 
-      <button type="submit">Add contact</button>
+      <button type="submit" className={css.button}>
+        Add contact
+      </button>
     </form>
   );
 }

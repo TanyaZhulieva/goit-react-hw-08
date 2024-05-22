@@ -3,3 +3,9 @@
     align-items: center;
     gap: 12px;
 }
+
+.button {
+    display: flex;
+    justify-content: center;
+    color: #295770;
+  }

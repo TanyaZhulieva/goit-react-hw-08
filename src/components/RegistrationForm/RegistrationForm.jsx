@@ -1,12 +1,12 @@
 import { Formik, Form, Field } from "formik";
 import { useDispatch } from "react-redux";
-import {register} from '../../redux/auth/operations.js'
+import { register } from "../../redux/auth/operations.js";
 import css from "./RegistrationForm.module.css";
 
 export default function RegistrationForm() {
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
   const handleSubmit = (values, actions) => {
-    dispatch(register(values))
+    dispatch(register(values));
     console.log(values);
     actions.resetForm();
   };
@@ -17,7 +17,6 @@ export default function RegistrationForm() {
         email: "",
         password: "",
       }}
-
       onSubmit={handleSubmit}
     >
       <Form className={css.form} autoComplete="off">
@@ -33,7 +32,9 @@ export default function RegistrationForm() {
           Password
           <Field type="password" name="password" />
         </label>
-        <button type="submit">Register</button>
+        <button type="submit" className={css.button}>
+          Register
+        </button>
       </Form>
     </Formik>
   );
