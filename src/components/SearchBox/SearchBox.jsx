@@ -7,13 +7,13 @@ export default function SearchBox() {
   const dispatch = useDispatch();
   const filterValue = useSelector(selectValueFilters);
 
-  const handleChange = (event) => dispatch(setFilter(event.target.value));
+  const handleChange = (event) => dispatch(setFilter(event.target.value))
 
   return (
     <div className={css.wrapper}>
       <p className={css.search}>Find contacts by name</p>
       <input
-        type="text"  
+        type="text"
         value={filterValue}
         onChange={handleChange}
         className={css.input}
